@@ -36,7 +36,8 @@ float letterStrength(char letter)
 
     if(letter =='N')
     {
-        return 6.6544
+        return 6.6544;
+    }
 
     if(letter =='S')
     {
@@ -110,7 +111,8 @@ float letterStrength(char letter)
     
     if(letter =='V')
     {
-        return 1.28990074
+        return 1.2899;
+    }
     
     if(letter =='X')
     {
