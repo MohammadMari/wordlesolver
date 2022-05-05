@@ -143,5 +143,17 @@ void wordStrength::calcWordStrength()
 	for (int i = 0; i < word.size(); i++)
 	{
 		strength += letterStrength(word.at(i));
+		for(int j = 0; j < word.size(); j++)
+        	{
+           	 	if(i==j)
+           	 	{
+                		continue;
+            		}
+
+            		if(word.at(i)==word.at(j))
+            		{
+               			strength -= letterStrength(word.at(i))*2;
+           		}
+       		}
 	}
 }
