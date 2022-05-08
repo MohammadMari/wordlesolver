@@ -6669,7 +6669,6 @@ innit
 inorb
 inrun
 inset
-inspo
 intel
 intil
 intis
