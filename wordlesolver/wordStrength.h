@@ -15,5 +15,3 @@ public:
 	float strength = 0;
 };
 
-
-// sort words by strength (best to guess first)

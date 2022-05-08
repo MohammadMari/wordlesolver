@@ -8,6 +8,10 @@ using namespace std;
 int main()
 {
 	wordList list;
+
+	list.readFile();
+	list.sort();
+
 	guessWord guess;
 	
 	for (int i = 0; i < 7; i++)

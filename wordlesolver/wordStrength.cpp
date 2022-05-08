@@ -1,6 +1,7 @@
 #include "wordStrength.h"
 
-
+// Returns something along the lines of how common a letter appears in words.
+// The more words we can get rid of, the faster we can guess the word.
 float letterStrength(char letter)
 {
 	letter = (char)toupper(letter);
@@ -133,7 +134,6 @@ float letterStrength(char letter)
 	{
 		return 0.1962;
 	}
-
 }
 
 void wordStrength::calcWordStrength(string word)
