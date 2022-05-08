@@ -4,25 +4,30 @@
 
 void wordList::remove(int i)
 {
-	int size = words.size();
-	if (size <= (i)) // whyyyy, I have no clue why but this breaks things sometimes.
+	if (i > 0)
 	{
-		cout << "pls fix" << endl;
-		return;
+		int cnt = 0;
+		wordNode* node = words;
+
+		while ((cnt < (i - 1)) && node->next)
+		{
+			node = node->next;
+			cnt++;
+		}
+
+		wordNode* remove = node->next;
+		node->next = remove->next;
+
+		free(remove);
 	}
+	else
+	{
+		wordNode* remove = words;
+		words = words->next;
 
-	words.erase(words.begin() + i);
-}
-
-struct great
-{
-	bool operator()(wordNode const& a, wordNode const& b) const { return a.wordStr.strength > b.wordStr.strength; }
-};
-
-// sort words by their strength
-void wordList::sort()
-{
-	std::sort(words.begin(), words.end(), great());
+		free(remove);
+	}
+	
 }
 
 // read the text file, put it in vector.
@@ -37,7 +42,6 @@ void wordList::readFile()
 	{
 		if (word.size() < 5)
 			continue;
-		words.push_back(word);
+		push_back(word);
 	}
 }
-

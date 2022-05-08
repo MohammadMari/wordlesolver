@@ -3,10 +3,10 @@
 
 void guessWord::guess(wordList& list)
 {
-	if (!list.words.size())
+	if (!list.size())
 		return; // shouldn't happen but uhhh.
 
-	string wordToGuess = list.words.front().word; // sorted by strength, best word should be first
+	string wordToGuess = list.best(); // sorted by strength, best word should be first
 	cout << "Guess: " << wordToGuess << endl;
 
 	cout << "Enter G for green, Y for Yellow or W for wrong" << endl;
@@ -58,9 +58,9 @@ void guessWord::filterList(wordList& list)
 	// if it doesn't we remove it.
 	for (auto letter : green)
 	{
-		for (int i = 0; i < list.words.size(); i++)
+		for (int i = 0; i < list.size(); i++)
 		{
-			string word = list.words.at(i).word;
+			string word = list.at(i);
 			if (word.at(letter.index) != letter.letter)
 			{
 				list.remove(i);
@@ -72,9 +72,9 @@ void guessWord::filterList(wordList& list)
 	for (auto letter : yellow)
 	{
 		// remove all words with that letter in that pos
-		for (int i = 0; i < list.words.size(); i++)
+		for (int i = 0; i < list.size(); i++)
 		{
-			string word = list.words.at(i).word;
+			string word = list.at(i);
 			if (word.at(letter.index) == letter.letter) // is there the yellow letter in this pos? get rid of it
 			{
 				list.remove(i);
@@ -106,9 +106,9 @@ void guessWord::filterList(wordList& list)
 	// is the letter in the word? remove it 
 	for (auto letter : grey)
 	{
-		for (int i = 0; i < list.words.size(); i++)
+		for (int i = 0; i < list.size(); i++)
 		{
-			string word = list.words.at(i).word;
+			string word = list.at(i);
 
 			for (int j = 0; j < word.size(); j++)
 			{

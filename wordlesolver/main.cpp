@@ -10,7 +10,6 @@ int main()
 	wordList list;
 
 	list.readFile();
-	list.sort();
 
 	guessWord guess;
 	
