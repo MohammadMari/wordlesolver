@@ -35,6 +35,8 @@ void wordList::readFile()
 	string word;
 	while (file >> word)
 	{
+		if (word.size() < 5)
+			continue;
 		words.push_back(word);
 	}
 }
