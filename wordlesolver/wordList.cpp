@@ -54,8 +54,8 @@ string wordList::best()
 	if (!node)
 		return "";
 
-	wordNode* bestPtr = nullptr;
-	float bestAmt = INT_MIN;
+	wordNode* bestPtr = node;
+	float bestAmt = node->wordStr.strength;
 
 	while (node->next)
 	{
@@ -114,6 +114,9 @@ string wordList::at(int i)
 {
 	int cnt = 0;
 	wordNode* ret = words;
+
+	if (!ret)
+		return "";
 
 	while ((cnt < i) && ret->next)
 	{
