@@ -15,7 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="wordlesolver.cpp">
+    <ClInclude Include="guessWord.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wordList.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wordStrength.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="guessWord.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wordList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wordStrength.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -9,13 +9,10 @@ public:
 	wordStrength() {};
 	wordStrength(string word)
 	{
-		this->word = word;
-		calcWordStrength();
+		calcWordStrength(word);
 	}
-	void calcWordStrength();
-	string word;
+	void calcWordStrength(string word);
 	float strength = 0;
-
 };
 
 

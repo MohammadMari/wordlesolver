@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="guessWord.h" />
+    <ClInclude Include="wordList.h" />
+    <ClInclude Include="wordStrength.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="guessWord.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="wordList.cpp" />
+    <ClCompile Include="wordStrength.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,9 +149,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="wordlesolver.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
